@@ -1,0 +1,250 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f5f7f9;
+  color: #6c757d;
+}
+
+.container { 
+  position: relative;
+  width: 100%;
+  max-width: 500px;
+  background-color: white;
+  box-shadow: 0 0 10px #258aca;
+  border-radius: 10px;
+  padding: 30px;
+  box-sizing: border-box;
+}
+
+.container img {
+  display: block;
+  margin: 0 auto;
+  max-width: 150px;
+  height: auto;
+  margin-bottom: 80px;
+}
+
+.container h2 {
+  font-family: 'Cairo', sans-serif;
+  text-align: left;
+  margin-bottom: 20px;
+  color: #258aca;
+}
+
+.form-group label,
+.dropdown label,
+#device-section label,
+#person-section label {
+  display: block;
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group select,
+.dropdown select,
+#device-section input,
+#device-section select,
+#person-section input,
+#person-section select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #cacaca;
+  border-radius: 8px;
+  box-sizing: border-box;
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.dropdown select:focus,
+#device-section input:focus,
+#device-section select:focus,
+#person-section input:focus,
+#person-section select:focus {
+  border-color: #258aca;
+  outline: none;
+}
+
+.radio-group {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 15px;
+  justify-content: space-evenly;
+}
+
+.radio-container {
+  display: flex;
+  align-items: baseline;
+}
+
+.radio-container label {
+  font-size: 14px;
+  margin-right: 10px;
+}
+
+.radio-group label {
+  font-size: 14px;
+  font-weight: bold;
+  color: #258aca; 
+}
+
+.radio-group .radio-container {
+  position: relative;
+}
+
+.radio-group .radio-container input[type="radio"][name="form-type"] {
+  display: none;
+}
+
+.radio-group .radio-container label.radio-button {
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+  background-color: #fff;
+  color: #258aca;
+  border: 1px solid #258aca;
+}
+
+.radio-group .radio-container input[type="radio"][name="form-type"]:checked + label.radio-button {
+  background-color: #258aca;
+  color: #ffffff;
+}
+
+.radio-group .radio-container input[type="radio"][name="form-type"]:hover + label.radio-button {
+  background-color: #d7e3fc;
+}
+
+.radio-group-normal {
+  display: flex;
+  gap: 25px;
+  align-items: baseline;
+}
+
+.radio-group-normal label {
+  font-size: 14px;
+  color: #258aca; 
+}
+
+.radio-button-normal {
+  font-size: 14px;
+  margin-right: 10px;
+}
+
+#device-section,
+#person-section {
+  font-size: 14px;
+  margin-bottom: 15px;
+  display: none;
+}
+
+.button-group {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 15px;
+  align-items: center;
+}
+
+.button-group label {
+  font-size: 14px;
+}
+
+button {
+  background-color: transparent;
+  border: 1px solid #258aca;
+  color: #258aca;
+  height: 37px;
+  border-radius: 20px;
+  margin: 20px auto;
+  display: block;
+  width: 130px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+button:hover {
+  background-color: #258aca;
+  color: white;
+  border-color: black;
+  transform: scale(1.05);
+}
+
+@media screen and (max-width: 767px) {
+  .container img {
+    max-width: 120px;
+  }
+
+  .form-group label,
+  .dropdown label,
+  #device-section label,
+  #person-section label {
+    font-size: 13px;
+  }
+
+  .form-group input,
+  .form-group select,
+  .dropdown select,
+  #device-section input,
+  #device-section select,
+  #person-section input,
+  #person-section select {
+    padding: 7px;
+  }
+
+  .radio-group label {
+    font-size: 13px;
+  }
+
+  .button-group label {
+    font-size: 13px;
+  }
+
+  button {
+    font-size: 13px;
+    width: 100%;
+    padding: 10px;
+  }
+
+  body,
+  .container {
+    min-height: 100vh;
+    justify-content: center;
+  }
+
+  .container {
+    padding: 30px 20px;
+  }
+}
+
+@keyframes scale-fade {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.animation-scale-fade {
+  animation: scale-fade 0.3s ease-in-out forwards;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .container {
+    width: 90%;
+    max-width: 600px;
+    justify-content: center;
+    align-items: center;
+  }
+} 

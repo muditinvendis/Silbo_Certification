@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CertificatePage</title>
+    <link rel="stylesheet" href="css/certificatestyle.css">
+    <link rel="icon" href="images/silbo logo.ico">
+</head>
+<body>
+    <div class="container">
+        <div>
+            <img src="images/silbo.svg" alt="Silbo Logo" class="centered-image">
+        </div>
+        <form id="certificate-form" action="/api/certificate" method="post" novalidate>
+            <div class="radio-group">
+                <div class="radio-container">
+                    <input type="radio" id="device-radio" name="form-type" value="device" checked>
+                    <label for="device-radio" class="radio-button">DEVICE</label>
+                </div>
+                <div class="radio-container">
+                    <input type="radio" id="person-radio" name="form-type" value="person">
+                    <label for="person-radio" class="radio-button">PERSON</label>
+                </div>
+            </div>
+
+            <div id="device-section">
+                <div class="dropdown">
+                    <label for="server-ip">Server IP:</label>
+                    <select id="server-ip" name="server-ip">
+                        <option value="139.59.65.241">139.59.65.241</option>
+                    </select>
+                </div>
+
+                <label for="device-type">Select Device Type:</label>
+                <select id="device-type" name="device-type">
+                    <option value="Router">Router</option>
+                    <option value="Gateway">Gateway</option>
+                    <option value="isenseGateway">isenseGateway</option>
+                </select>
+
+                <label for="site-id">Site ID:</label>
+                <input type="text" id="site-id" name="site-id" placeholder="Enter Site ID" required>
+
+                <label for="device-id">Device ID:</label>
+                <input type="text" id="device-id" name="device-id" placeholder="Enter your device ID" required>
+
+                <label for="customer-name">Customer Name:</label>
+                <input type="text" id="customer-name" name="customer-name" placeholder="Enter customer name" required>
+
+                <label for="model-name">Model Name:</label>
+                <input type="text" id="model-name" name="model-name" placeholder="Enter model name" required>
+
+                <label for="project-type">Project Type:</label>
+                <input type="text" id="project-type" name="project-type" placeholder="Enter project type" required>
+            </div>
+
+            <div id="person-section" style="display: none;">
+                <div class="dropdown">
+                    <label for="server-ip">Server IP:</label>
+                    <select id="server-ip" name="server-ip">
+                        <option value="139.59.65.241">139.59.65.241</option>
+                    </select>
+                </div>
+
+                <label for="person-name">Person Name:</label>
+                <input type="text" id="person-name" name="person-name" placeholder="Enter person's name" required>
+
+                <label for="project-name">Project Name:</label>
+                <input type="text" id="project-name" name="project-name" placeholder="Enter project name" required>
+                 
+                <label for="project-scope">Project Scope:</label>
+                <div class="radio-group-normal">
+                    <div class="radio-container">
+                        <input type="radio" id="internal" name="project-scope" value="Internal" required>
+                        <label for="internal" class="radio-button-normal">Internal</label>
+                    </div>
+                    <div class="radio-container">
+                        <input type="radio" id="external" name="project-scope" value="External">
+                        <label for="external" class="radio-button-normal">External</label>
+                    </div>
+                </div>
+            </div>
+
+            <button type="submit" class="custom-button">Get Certificate</button>
+        </form>
+    </div>
+    <script src="js/certificateScript.js"></script>
+</body>
+</html>

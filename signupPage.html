@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Register</title>
+  <link rel="stylesheet" href="css/signupPage.css">
+  <script src="js/loadingScreen.js"></script>
+  <link rel="icon" href="images/silbo logo.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cairo&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+  <div class="container">
+    <div class="logo">
+      <img src="images/silbo.svg" alt="Silbo Logo">
+    </div>
+    <h2>REGISTER</h2>
+    <form id="signupForm" method="post"> 
+      <div class="form-group">
+        <label for="indentifier">Email,Name or Phone Number:</label>
+        <input type="text" id="indentifier" placeholder="Enter name, email or phone number" required>
+        <div class="error-message" id="nameEmailPhoneError"></div>
+      </div>
+      <div class="form-group">
+        <label for="password">Password(8 or more characters):</label>
+        <div class="password-field">
+          <input type="password" id="password" placeholder="Enter your password" autocomplete="on" required>
+          <span class="toggle-password">
+            <i class="fas fa-eye" id="eyeIcon" onclick="togglePasswordVisibility('password')"></i>
+          </span>
+        </div>
+        <div class="error-message" id="passwordError"></div>
+      </div>
+      <div class="form-group">
+        <label for="confirmPassword">Confirm Password:</label>
+        <div class="password-field">
+          <input type="password" id="confirmPassword" placeholder="Confirm your password" autocomplete="on" required>
+          <span class="toggle-password">
+            <i class="fas fa-eye" id="confirmEyeIcon" onclick="toggleConfirmPasswordVisibility('confirmPassword')"></i>
+          </span>
+        </div>
+        <div class="error-message" id="confirmPasswordError"></div>
+      </div>
+      <div class="checkboxes">
+        <div class="checkbox-container">
+          <input type="checkbox" id="termsOfService" required>
+          <label for="termsOfService">Accept <a href="#">Website Terms of Service.</a></label>
+        </div>
+        <div class="checkbox-container">
+          <input type="checkbox" id="dataProcessingAgreement" required>
+          <label for="dataProcessingAgreement">Accept <a href="#">Website Data Processing Agreement.</a></label>
+        </div>
+        <div class="checkbox-container">
+          <input type="checkbox" id="newsletterSubscription">
+          <label for="newsletterSubscription">I would like to subscribe to the newsletter.</label>
+        </div>
+      </div>
+      <p class="privacy_policy">We will process your data in accordance with our <a href="#">Privacy Policy.</a></p>
+      <div class="success-message" id="successMessage"></div>
+      <button type="submit">Sign Up</button>
+    </form>
+    <p class="login_link">Already have an account? <a href="loginPage.html">Login</a></p>
+  </div>
+  <script src="js/signupScript.js"></script>
+  <div class="loading-screen" id="loadingScreen">
+    <div class="loader"></div>
+    <p>Registering...</p>
+</body>
+</html>

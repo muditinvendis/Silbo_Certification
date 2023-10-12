@@ -1,0 +1,272 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f5f7f9;
+  color: #6c757d;
+}
+
+.container {
+  background-color: #fff;
+  box-shadow: 0 0 10px #258aca;
+  padding: 30px;
+  max-width: 400px;
+  width: 100%;
+  border-radius: 10px;
+}
+
+.logo {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.logo img {
+  max-width: 150px;
+  height: auto;
+}
+
+h2 {
+  font-family: 'Cairo', sans-serif;
+  text-align: left;
+  margin-bottom: 20px;
+  color: #258aca;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-sizing: border-box;
+  padding-right: 40px;
+}
+
+input::placeholder {
+  color: #b1b1b1;
+  font-weight: 100;
+}
+
+input:focus {
+  border-color: #258aca;
+  box-shadow: 0 0 5px #258aca;
+  outline: none;
+}
+
+.password-field {
+  position: relative;
+}
+
+.password-field .toggle-password {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.toggle-password:hover {
+  color: #258aca;
+}
+
+.checkbox-container {
+  display: flex;
+  align-items: center;
+}
+
+.checkboxes .checkbox-container {
+  margin-bottom: 8px;
+}
+
+.checkboxes label {
+  font-size: 14px;
+  margin-left: 10px;
+}
+
+.privacy_policy {
+  text-align: center;
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+button {
+  background-color: transparent;
+  border: 1px solid #258aca;
+  color: #258aca;
+  height: 37px;
+  border-radius: 4px;
+  margin: 20px auto;
+  display: block;
+  width: 130px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+button:hover {
+  background-color: #258aca;
+  color: white;
+  border-color: black;
+}
+
+.login_link {
+  text-align: center;
+  margin-top: 10px;
+  font-size: 15px;
+  color: #6c757d;
+  text-decoration: none;
+}
+
+.login_link a {
+  color: #6c757d;
+  text-decoration: none;
+}
+
+a{
+  color: blue;
+}
+
+a:hover {
+  color: #007bff;
+}
+
+.success-message {
+  font-family: 'Cairo', sans-serif;
+  font-weight: bold;
+  text-align: center;
+  color: #258aca;
+  margin: 20px 0 20px 0;
+  font-size: 16px;
+}
+
+.error-message {
+  color: red;
+  margin-top: 5px;
+  font-size: 14px;
+}
+
+@media screen and (max-width: 767px) {
+  .logo img {
+    max-width: 120px;
+  }
+
+  .form-group input[type="text"],
+  .form-group input[type="password"] {
+    padding: 8px;
+  }
+
+  .checkbox-container {
+    font-size: 13px;
+  }
+
+  button {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .login_link {
+    font-size: 14px;
+  }
+
+  body,
+  .container {
+    min-height: 100vh;
+    justify-content: center;
+  }
+
+  .container {
+    padding: 20px; 
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .logo img {
+    max-width: 100px;
+  }
+
+  .form-group label {
+    font-size: 13px;
+  }
+
+  .form-group input {
+    padding: 7px;
+  }
+
+  .checkboxes label {
+    font-size: 13px;
+  }
+
+  .privacy_policy {
+    font-size: 13px;
+  }
+
+  button {
+    font-size: 13px;
+    width: 100%;
+    padding: 10px;
+  }
+
+  .login_link {
+    font-size: 13px;
+  }
+
+  body,
+  .container {
+    min-height: 100vh;
+  }
+  .container {
+    padding: 30px 20px;
+  }
+}
+
+/* loadingScreen */
+.loading-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.9);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999; 
+  display: none; 
+}
+
+.loader {
+  border: 5px solid #f3f3f3;
+  border-top: 5px solid #3498db;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .container {
+    width: 90%;
+    max-width: 600px;
+    justify-content: center;
+    align-items: center;
+  }
+}

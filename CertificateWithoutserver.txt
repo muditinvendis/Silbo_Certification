@@ -1,0 +1,13 @@
+                
+
+
+                                                       Certificate Documentation:
+
+
+
+1. This folder just contains static files and it is not connected to any server
+   so there is no need to connect it through the server.
+2. Just open the folder in VS Code and click on live server 
+3. Before clicking on the live server be on the desired file which you want to open
+   the only click on the live server.
+4. The file will get open and you can work futher with that.
